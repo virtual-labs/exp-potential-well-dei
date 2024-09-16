@@ -2,35 +2,29 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What does the quantum number n represent in the Schrödinger equation?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The amplitude of the wavefunction",
+        "b": "The energy level of the particle",
+        "c": "The length of the box",
+        "d": "The time interval"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "b": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions#:~:text=The%20quantum%20number%2C%20n%3A%20This,but%204.1%20is%20not%20allowed).'>here</a>"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the purpose of the time-dependent part of the wavefunction in the equation?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To describe the spatial distribution of the particle",
+        "b": "To describe the amplitude of the wavefunction",
+        "c": "To describe how the wavefunction evolves over time",
+        "d": "To calculate the value of n"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 1  <a href='https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#:~:text=The%20time%2Ddependent%20Schr%C3%B6dinger%20equation%20described%20above%20predicts%20that%20wave,Schr%C3%B6dinger%20equation%20for%20any%20state.'>here</a>"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
