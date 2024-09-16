@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Particle in a Box Simulation</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-		<!-- Your code goes here-->
-
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+    <div class="container">
+        <h1>1D Particle in a Box </h1>
+        <canvas id="simulationCanvas"></canvas>
+        <div class="controls">
+            <label for="quantumNumber">Energy Level (Quantum Number):</label>
+            <input type="range" id="quantumNumber" min="1" max="10" value="1">
+            <span id="quantumValue">1</span>
+            <br><br>
+            <button id="simulateButton">Simulate</button>
+            <button id="pauseButton">Pause</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

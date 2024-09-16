@@ -2,35 +2,29 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "If you increase the quantum number n, what happens to the number of nodes in the wavefunction? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The number of nodes decreases",
+        "b": "The number of nodes remains the same",
+        "c": "The number of nodes increases",
+        "d": "The number of nodes becomes zero"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/03%3A_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.05%3A_The_Energy_of_a_Particle_in_a_Box_is_Quantized#:~:text=Note%20that%20as%20n%20increased,oscillation%20of%20the%20wavefunction%20increases.'>here</a>"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the effect of changing the amplitude A on the wavefunction?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It changes the frequency of the wavefunction",
+        "b": "It changes the shape of the wavefunction",
+        "c": "It changes the height of the wavefunction but not its shape",
+        "d": "It changes the time interval of the simulation"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 1  <a href='https://byjus.com/physics/wave-function/'>here</a>"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
