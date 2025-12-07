@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "If you increase the quantum number n, what happens to the number of nodes in the wavefunction? ",
+      "question": "1. If you increase the quantum number n, what happens to the number of nodes in the wavefunction?",
       "answers": {
         "a": "The number of nodes decreases",
         "b": "The number of nodes remains the same",
@@ -10,13 +10,13 @@
         "d": "The number of nodes becomes zero"
       },
       "explanations": {
-        "c": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/03%3A_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.05%3A_The_Energy_of_a_Particle_in_a_Box_is_Quantized#:~:text=Note%20that%20as%20n%20increased,oscillation%20of%20the%20wavefunction%20increases.'>here</a>"
+        "c": "Explanation 1  <a href='https://chem.libretexts.org/...'>here</a>"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the effect of changing the amplitude A on the wavefunction?",
+      "question": "2. What is the effect of changing the amplitude A on the wavefunction?",
       "answers": {
         "a": "It changes the frequency of the wavefunction",
         "b": "It changes the shape of the wavefunction",
@@ -27,6 +27,48 @@
         "c": "Explanation 1  <a href='https://byjus.com/physics/wave-function/'>here</a>"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In an infinite potential well, where is the probability of finding the particle zero?",
+      "answers": {
+        "a": "At the center only",
+        "b": "At the boundaries of the well",
+        "c": "Everywhere inside the well",
+        "d": "At random undefined positions"
+      },
+      "explanations": {
+        "b": "In an infinite well, ψ = 0 at the walls (boundaries), so probability is zero there."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What happens to the energy spacing between levels as the quantum number n increases in an infinite potential well?",
+      "answers": {
+        "a": "Energy spacing increases",
+        "b": "Energy spacing decreases",
+        "c": "Energy spacing remains constant",
+        "d": "Energy levels become continuous"
+      },
+      "explanations": {
+        "b": "Energy levels follow n², so the gap between consecutive levels decreases for large n."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What determines the curvature of the wavefunction inside a potential well?",
+      "answers": {
+        "a": "Amplitude only",
+        "b": "Particle mass and energy",
+        "c": "Box width only",
+        "d": "Time-dependent part of the wavefunction"
+      },
+      "explanations": {
+        "b": "Curvature is related to kinetic energy and mass through the Schrödinger equation: higher energy → more curvature."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
