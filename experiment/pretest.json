@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What does the quantum number n represent in the Schrödinger equation?",
+      "question": "1. What does the quantum number n represent in the Schrödinger equation?",
       "answers": {
         "a": "The amplitude of the wavefunction",
         "b": "The energy level of the particle",
@@ -10,13 +10,13 @@
         "d": "The time interval"
       },
       "explanations": {
-        "b": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions#:~:text=The%20quantum%20number%2C%20n%3A%20This,but%204.1%20is%20not%20allowed).'>here</a>"
+        "b": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions'>here</a>"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the purpose of the time-dependent part of the wavefunction in the equation?",
+      "question": "2. What is the purpose of the time-dependent part of the wavefunction in the equation?",
       "answers": {
         "a": "To describe the spatial distribution of the particle",
         "b": "To describe the amplitude of the wavefunction",
@@ -24,9 +24,51 @@
         "d": "To calculate the value of n"
       },
       "explanations": {
-        "c": "Explanation 1  <a href='https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#:~:text=The%20time%2Ddependent%20Schr%C3%B6dinger%20equation%20described%20above%20predicts%20that%20wave,Schr%C3%B6dinger%20equation%20for%20any%20state.'>here</a>"
+        "c": "Explanation 1  <a href='https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation'>here</a>"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What happens to the energy levels when the width of a potential well decreases?",
+      "answers": {
+        "a": "Energy levels move closer together",
+        "b": "Energy levels remain unchanged",
+        "c": "Energy levels become more widely spaced",
+        "d": "Energy levels become continuous"
+      },
+      "explanations": {
+        "c": "In a narrower potential well, confinement increases, causing quantized energy levels to become more widely spaced."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which statement correctly describes the wavefunction inside an infinite potential well?",
+      "answers": {
+        "a": "The wavefunction is zero everywhere",
+        "b": "The wavefunction is sinusoidal inside the well and zero at the boundaries",
+        "c": "The wavefunction is constant throughout the well",
+        "d": "The wavefunction increases linearly with position"
+      },
+      "explanations": {
+        "b": "In an infinite potential well, the wavefunction is sinusoidal inside and must be zero at the boundaries because the particle cannot exist outside the well."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Why can't a particle in an infinite potential well have zero energy (E = 0)?",
+      "answers": {
+        "a": "Because zero energy violates the uncertainty principle",
+        "b": "Because the particle has too much mass",
+        "c": "Because the well width is infinite",
+        "d": "Because the time-dependent wavefunction becomes undefined"
+      },
+      "explanations": {
+        "a": "A particle confined to a finite region must have some kinetic energy due to the uncertainty principle; E = 0 is not allowed."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
