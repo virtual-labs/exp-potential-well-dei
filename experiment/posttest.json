@@ -2,74 +2,116 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. If you increase the quantum number n, what happens to the number of nodes in the wavefunction?",
+      "question": "1. In the simulation, when you increased the quantum number n from 1 to 5, what did you observe about the number of peaks (antinodes)?",
       "answers": {
-        "a": "The number of nodes decreases",
-        "b": "The number of nodes remains the same",
-        "c": "The number of nodes increases",
-        "d": "The number of nodes becomes zero"
+        "a": "Number of peaks decreased",
+        "b": "Number of peaks remained the same",
+        "c": "Number of peaks increased to match n",
+        "d": "Number of peaks became random"
       },
       "explanations": {
-        "c": "Explanation 1  <a href='https://chem.libretexts.org/...'>here</a>"
+        "c": "The number of antinodes (peaks) in the wavefunction equals the quantum number n. So for n=5, there are exactly 5 peaks."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "2. What is the effect of changing the amplitude A on the wavefunction?",
+      "question": "2. When you enabled the |Ψ|² (probability) display, at which positions was the probability zero?",
       "answers": {
-        "a": "It changes the frequency of the wavefunction",
-        "b": "It changes the shape of the wavefunction",
-        "c": "It changes the height of the wavefunction but not its shape",
-        "d": "It changes the time interval of the simulation"
+        "a": "At the center of the box only",
+        "b": "At the boundaries and at the node positions",
+        "c": "Everywhere inside the box",
+        "d": "Probability was never zero"
       },
       "explanations": {
-        "c": "Explanation 1  <a href='https://byjus.com/physics/wave-function/'>here</a>"
+        "b": "The probability density |Ψ|² is zero at the boundaries (x=0, x=L) and at all node positions where the wavefunction crosses zero."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Based on your observations, how did the energy change when you doubled the quantum number from n=2 to n=4?",
+      "answers": {
+        "a": "Energy doubled",
+        "b": "Energy became 4 times larger",
+        "c": "Energy remained the same",
+        "d": "Energy decreased"
+      },
+      "explanations": {
+        "b": "Since E ∝ n², when n doubles from 2 to 4, the energy increases by a factor of (4/2)² = 4."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What did you observe about the wavelength when you increased the box length L?",
+      "answers": {
+        "a": "Wavelength decreased",
+        "b": "Wavelength increased proportionally",
+        "c": "Wavelength remained constant",
+        "d": "Wavelength became zero"
+      },
+      "explanations": {
+        "b": "The wavelength in a particle-in-a-box is λ = 2L/n wavelength increases proportionally with box length L."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In the Live Measurements panel, what was the relationship you observed between nodes and quantum number n?",
+      "answers": {
+        "a": "Nodes = n",
+        "b": "Nodes = n + 1",
+        "c": "Nodes = n - 1",
+        "d": "Nodes = 2n"
+      },
+      "explanations": {
+        "c": "From the simulation, you can verify that the number of nodes (zero crossings inside the box) equals n - 1 for quantum state n."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "3. In an infinite potential well, where is the probability of finding the particle zero?",
+      "question": "6. When comparing the ground state (n=1) with excited states (n>1), what did you notice about where the particle is most likely to be found?",
       "answers": {
-        "a": "At the center only",
-        "b": "At the boundaries of the well",
-        "c": "Everywhere inside the well",
-        "d": "At random undefined positions"
+        "a": "Always at the center for all states",
+        "b": "Always at the boundaries for all states",
+        "c": "At different positions depending on the quantum number",
+        "d": "Uniformly distributed for all states"
       },
       "explanations": {
-        "b": "In an infinite well, ψ = 0 at the walls (boundaries), so probability is zero there."
+        "c": "The probability distribution changes with n. For n=1, maximum probability is at center. For higher n, there are multiple maxima at antinode positions."
       },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     },
     {
-      "question": "4. What happens to the energy spacing between levels as the quantum number n increases in an infinite potential well?",
+      "question": "7. What happened to the oscillation frequency when you increased the quantum number n?",
       "answers": {
-        "a": "Energy spacing increases",
-        "b": "Energy spacing decreases",
-        "c": "Energy spacing remains constant",
-        "d": "Energy levels become continuous"
+        "a": "Oscillation became slower",
+        "b": "Oscillation became faster",
+        "c": "Oscillation speed remained unchanged",
+        "d": "Oscillation stopped completely"
       },
       "explanations": {
-        "b": "Energy levels follow n², so the gap between consecutive levels decreases for large n."
+        "b": "Higher energy states (higher n) have higher frequency of oscillation since ω ∝ E ∝ n². This is visible in the time evolution of the wavefunction."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "5. What determines the curvature of the wavefunction inside a potential well?",
+      "question": "8. From your graph of Energy vs Quantum Number, what type of relationship did you observe?",
       "answers": {
-        "a": "Amplitude only",
-        "b": "Particle mass and energy",
-        "c": "Box width only",
-        "d": "Time-dependent part of the wavefunction"
+        "a": "Linear relationship (straight line)",
+        "b": "Quadratic relationship (parabola)",
+        "c": "Inverse relationship (hyperbola)",
+        "d": "No clear relationship"
       },
       "explanations": {
-        "b": "Curvature is related to kinetic energy and mass through the Schrödinger equation: higher energy → more curvature."
+        "b": "The energy plot shows a quadratic (parabolic) relationship because E ∝ n². The graph curves upward as n increases."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     }
   ]
 }
