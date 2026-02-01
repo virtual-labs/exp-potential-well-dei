@@ -2,74 +2,116 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. What does the quantum number n represent in the Schrödinger equation?",
+      "question": "1. What does the quantum number n represent in the particle-in-a-box model?",
       "answers": {
         "a": "The amplitude of the wavefunction",
         "b": "The energy level of the particle",
         "c": "The length of the box",
-        "d": "The time interval"
+        "d": "The time interval of oscillation"
       },
       "explanations": {
-        "b": "Explanation 1  <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions'>here</a>"
+        "b": "The quantum number n determines the energy level of the particle. Higher n means higher energy state. <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions'>Learn more</a>"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "2. What is the purpose of the time-dependent part of the wavefunction in the equation?",
+      "question": "2. What is the time-dependent wavefunction for a particle in a 1D box?",
       "answers": {
-        "a": "To describe the spatial distribution of the particle",
-        "b": "To describe the amplitude of the wavefunction",
-        "c": "To describe how the wavefunction evolves over time",
-        "d": "To calculate the value of n"
+        "a": "Ψ(x,t) = A·cos(nπx/L)·sin(ωt)",
+        "b": "Ψ(x,t) = A·sin(nπx/L)·cos(ωt)",
+        "c": "Ψ(x,t) = A·sin(nx/L)·cos(t)",
+        "d": "Ψ(x,t) = A·cos(nx/L)·sin(t)"
       },
       "explanations": {
-        "c": "Explanation 1  <a href='https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation'>here</a>"
+        "b": "The correct form combines a sinusoidal spatial component sin(nπx/L) that satisfies boundary conditions, and a cosine time component cos(ωt) for time evolution."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "3. What happens to the energy levels when the width of a potential well decreases?",
+      "question": "3. What happens to the energy levels when the box length L decreases?",
       "answers": {
         "a": "Energy levels move closer together",
         "b": "Energy levels remain unchanged",
-        "c": "Energy levels become more widely spaced",
+        "c": "Energy levels become more widely spaced (higher energy)",
         "d": "Energy levels become continuous"
       },
       "explanations": {
-        "c": "In a narrower potential well, confinement increases, causing quantized energy levels to become more widely spaced."
+        "c": "Since E ∝ 1/L², decreasing L increases the energy. In a narrower box, greater confinement leads to higher quantized energy levels."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "4. Which statement correctly describes the wavefunction inside an infinite potential well?",
+      "question": "4. What does |Ψ|² represent in quantum mechanics?",
       "answers": {
-        "a": "The wavefunction is zero everywhere",
-        "b": "The wavefunction is sinusoidal inside the well and zero at the boundaries",
-        "c": "The wavefunction is constant throughout the well",
-        "d": "The wavefunction increases linearly with position"
+        "a": "The energy of the particle",
+        "b": "The momentum of the particle",
+        "c": "The probability density of finding the particle",
+        "d": "The velocity of the particle"
       },
       "explanations": {
-        "b": "In an infinite potential well, the wavefunction is sinusoidal inside and must be zero at the boundaries because the particle cannot exist outside the well."
+        "c": "|Ψ|² gives the probability density - the likelihood of finding the particle at a given position. It is always positive."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. How many nodes does a wavefunction have for quantum number n?",
+      "answers": {
+        "a": "n nodes",
+        "b": "n + 1 nodes",
+        "c": "n - 1 nodes",
+        "d": "2n nodes"
+      },
+      "explanations": {
+        "c": "The number of nodes (zero crossings inside the box, excluding boundaries) equals n - 1. For example, n=1 has 0 nodes, n=2 has 1 node, n=3 has 2 nodes, etc."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the boundary condition for the wavefunction at the walls of an infinite potential well?",
+      "answers": {
+        "a": "Ψ = maximum at boundaries",
+        "b": "Ψ = 0 at boundaries",
+        "c": "Ψ = 1 at boundaries",
+        "d": "Ψ is undefined at boundaries"
+      },
+      "explanations": {
+        "b": "At the walls of an infinite potential well, the wavefunction must be zero (Ψ(0) = Ψ(L) = 0) because the particle cannot exist outside the box."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "5. Why can't a particle in an infinite potential well have zero energy (E = 0)?",
+      "question": "7. What is the formula for energy levels in a 1D infinite potential well?",
       "answers": {
-        "a": "Because zero energy violates the uncertainty principle",
-        "b": "Because the particle has too much mass",
-        "c": "Because the well width is infinite",
-        "d": "Because the time-dependent wavefunction becomes undefined"
+        "a": "Eₙ = nh/(8mL²)",
+        "b": "Eₙ = n²h²/(8mL²)",
+        "c": "Eₙ = nh²/(8mL)",
+        "d": "Eₙ = n²h/(8mL)"
       },
       "explanations": {
-        "a": "A particle confined to a finite region must have some kinetic energy due to the uncertainty principle; E = 0 is not allowed."
+        "b": "The energy levels are given by Eₙ = n²h²/(8mL²), showing that energy is proportional to n² and inversely proportional to L²."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Why can't a particle in an infinite potential well have zero energy (E = 0)?",
+      "answers": {
+        "a": "Because zero energy violates the Heisenberg uncertainty principle",
+        "b": "Because the particle has too much mass",
+        "c": "Because the box width is infinite",
+        "d": "Because the wavefunction becomes imaginary"
+      },
+      "explanations": {
+        "a": "A particle confined to a finite region must have some kinetic energy due to the uncertainty principle. If E = 0, the particle would have zero momentum, violating Δx·Δp ≥ ℏ/2."
       },
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     }
   ]
 }

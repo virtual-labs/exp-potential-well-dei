@@ -1,47 +1,791 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ============================================
+   1D PARTICLE IN A BOX - ENHANCED SIMULATION
+   Compact Layout - No Scroll Design
+   ============================================ */
+
+/* CSS Variables - Design Tokens */
+:root {
+    /* Primary Colors */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    
+    /* Solid Colors */
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #4facfe;
+    --success-color: #00d9a5;
+    --warning-color: #ffc107;
+    --danger-color: #ff6b6b;
+    
+    /* Background Colors */
+    --bg-dark: #0f0f1a;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-glass: rgba(255, 255, 255, 0.08);
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    
+    /* Borders & Shadows */
+    --border-glass: rgba(255, 255, 255, 0.1);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
+    
+    /* Compact Spacing */
+    --spacing-xs: 0.15rem;
+    --spacing-sm: 0.35rem;
+    --spacing-md: 0.6rem;
+    --spacing-lg: 0.9rem;
+    --spacing-xl: 1.2rem;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
     height: 100vh;
-    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    background: var(--bg-dark);
+    background-image: 
+        radial-gradient(ellipse at top left, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* Main Container - Full Viewport */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+    overflow: hidden;
+}
+
+/* ============================================
+   HEADER - Compact
+   ============================================ */
+.header {
+    flex-shrink: 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.quantum-icon {
+    font-size: 1.8rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.header h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 0;
 }
 
-.container {
+.subtitle {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(0, 217, 165, 0.15);
+    border: 1px solid rgba(0, 217, 165, 0.3);
+    border-radius: 50px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.badge.running {
+    background: rgba(79, 172, 254, 0.15);
+    border-color: rgba(79, 172, 254, 0.3);
+    color: var(--accent-color);
+}
+
+.badge.paused {
+    background: rgba(255, 193, 7, 0.15);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: var(--warning-color);
+}
+
+/* ============================================
+   CONTENT WRAPPER - Flex Fill
+   ============================================ */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr 260px;
+    gap: var(--spacing-sm);
+    flex: 1;
+    min-height: 0;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+/* ============================================
+   PANEL STYLES - Compact
+   ============================================ */
+.control-panel,
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.control-panel::-webkit-scrollbar,
+.info-panel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.control-panel::-webkit-scrollbar-thumb,
+.info-panel::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.panel-section {
+    flex: 1 1 auto;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: var(--transition-normal);
+    min-height: 0;
+}
+
+.panel-section:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.section-title .icon {
+    font-size: 1rem;
+}
+
+/* ============================================
+   CONTROL GROUP - Compact
+   ============================================ */
+.control-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.control-group:last-child {
+    margin-bottom: 0;
+}
+
+.control-group label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tooltip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    cursor: help;
+}
+
+.tooltip:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Custom Slider - Compact */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.custom-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.5);
+}
+
+.custom-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.slider-value {
+    min-width: 38px;
+    padding: 4px 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 20px;
+/* ============================================
+   TOGGLE SWITCHES - Compact
+   ============================================ */
+.toggle-group {
+    margin-bottom: var(--spacing-sm);
 }
 
-canvas {
-    border: 2px solid black; /* Black border to represent the box */
-    background-color: #ffffff;
+.toggle-group:last-child {
+    margin-bottom: 0;
 }
 
-.controls {
-    margin-top: 20px;
-}
-
-label {
-    font-size: 18px;
-}
-
-input[type="range"] {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#quantumValue {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-button {
-    font-size: 16px;
-    margin: 5px;
-    padding: 8px 16px;
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     cursor: pointer;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 42px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+    transition: var(--transition-normal);
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: var(--transition-normal);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: var(--primary-gradient);
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+    transform: translateX(20px);
+}
+
+.toggle-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   BUTTON STYLES - Compact
+   ============================================ */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xs);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 8px 12px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.btn-icon {
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-danger {
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: var(--danger-color);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-glass);
+    color: var(--text-secondary);
+}
+
+.btn-outline:hover {
+    background: var(--bg-card);
+    border-color: var(--primary-color);
+}
+
+.keyboard-hint {
+    margin-top: var(--spacing-sm);
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+kbd {
+    display: inline-block;
+    padding: 1px 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-glass);
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.6rem;
+}
+
+/* ============================================
+   SIMULATION AREA - Fill Available Space
+   ============================================ */
+.simulation-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    min-height: 0;
+    overflow: hidden;
+}
+
+.canvas-container {
+    position: relative;
+    flex: 1;
+    min-height: 200px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+    overflow: hidden;
+}
+
+#simulationCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 15, 26, 0.9) 0%, rgba(20, 20, 35, 0.95) 100%);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-glass);
+}
+
+.canvas-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    pointer-events: none;
+    transition: var(--transition-normal);
+}
+
+.canvas-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Glow effect for canvas when running */
+.canvas-container.running {
+    box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   DATA PANEL - Compact Grid
+   ============================================ */
+.data-panel {
+    flex-shrink: 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.data-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.data-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary-color);
+}
+
+.data-label {
+    font-size: 0.55rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+
+.data-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.data-unit {
+    font-size: 0.5rem;
+    color: var(--text-muted);
+    margin-top: 1px;
+}
+
+.state-indicator {
+    background: var(--primary-gradient) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+/* ============================================
+   PROCEDURE SECTION - Compact
+   ============================================ */
+.procedure-list {
+    list-style: none;
+}
+
+.procedure-step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.procedure-step:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.procedure-step.active {
+    background: rgba(102, 126, 234, 0.15);
+    border-left: 2px solid var(--primary-color);
+}
+
+.step-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.step-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.step-text strong {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   EQUATION CARDS - Compact
+   ============================================ */
+.equation-card {
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.equation-card:last-child {
+    margin-bottom: 0;
+}
+
+.equation {
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 4px;
+}
+
+.equation-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--text-muted);
+}
+
+/* ============================================
+   TIP CARD - Compact
+   ============================================ */
+.tip-card {
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.tip-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ============================================
+   LEGEND - Compact
+   ============================================ */
+.legend-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 20px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+/* ============================================
+   FOOTER - Hidden on compact view
+   ============================================ */
+.footer {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1400px) {
+    .content-wrapper {
+        grid-template-columns: 220px 1fr 240px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        grid-template-columns: 200px 1fr 220px;
+    }
+    
+    .data-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+    
+    .control-panel,
+    .info-panel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    html, body {
+        overflow: auto;
+    }
+    
+    .main-container {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   ANIMATIONS - Subtle
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-section {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Focus states */
+.control-group:focus-within label {
+    color: var(--accent-color);
+}
+
+::selection {
+    background: var(--primary-color);
+    color: white;
 }
