@@ -47,7 +47,7 @@ When you open the simulation, you'll see three main sections:
 ### Step 6: Record Observations
 Fill in the observation table for each quantum number:
 
-<table style="width:100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
+<table style="border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
 <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">n (Quantum Number)</th>
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy (eV)</th>
@@ -155,7 +155,7 @@ Fill in the observation table for each quantum number:
 
 ### Step 10: Record Box Length Effect
 
-<table style="width:100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);">
+<table style="border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);">
 <tr style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Box Length L (nm)</th>
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy at n=3 (eV)</th>
