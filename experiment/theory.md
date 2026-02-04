@@ -47,12 +47,34 @@ Changing the box length affects:
 ## Simulation Features
 
 ### Parameters Panel
-| Control | Description | Range |
-|---------|-------------|-------|
-| Quantum Number (n) | Sets the energy level | 1 - 10 |
-| Box Length (L) | Length of potential well | 1 - 10 nm |
-| Wave Amplitude | Visual amplitude of wave | 50 - 150 |
-| Animation Speed | Speed of time evolution | 1x - 10x |
+
+<table style="width:100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Control</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Description</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Range</th>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">Quantum Number (n)</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">Sets the energy level</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1 - 10</td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">Box Length (L)</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">Length of potential well</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1 - 10 nm</td>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">Wave Amplitude</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">Visual amplitude of wave</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">50 - 150</td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: none; text-align: center; font-weight: 600; color: #667eea;">Animation Speed</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">Speed of time evolution</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">1x - 10x</td>
+</tr>
+</table>
 
 ### Display Options
 - **Show |Ψ|²**: Toggle probability density visualization

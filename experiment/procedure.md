@@ -47,24 +47,84 @@ When you open the simulation, you'll see three main sections:
 ### Step 6: Record Observations
 Fill in the observation table for each quantum number:
 
-<table style="width:100%; border-collapse: collapse;">
-<tr style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
-<th style="padding: 10px; border: 1px solid #ddd;">n (Quantum Number)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">Energy (eV)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">Wavelength (nm)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">No. of Nodes</th>
-<th style="padding: 10px; border: 1px solid #ddd;">No. of Peaks</th>
+<table style="width:100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">n (Quantum Number)</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy (eV)</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Wavelength (nm)</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">No. of Nodes</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">No. of Peaks</th>
 </tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">1</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">3</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">5</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">8</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">9</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">1</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">2</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">3</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">4</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">5</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">6</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">7</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">8</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(102, 126, 234, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">9</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: none; text-align: center; font-weight: 600; color: #667eea;">10</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+</tr>
 </table>
 
 ---
@@ -95,17 +155,37 @@ Fill in the observation table for each quantum number:
 
 ### Step 10: Record Box Length Effect
 
-<table style="width:100%; border-collapse: collapse;">
-<tr style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white;">
-<th style="padding: 10px; border: 1px solid #ddd;">Box Length L (nm)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">Energy at n=3 (eV)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">Wavelength (nm)</th>
+<table style="width:100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);">
+<tr style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Box Length L (nm)</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy at n=3 (eV)</th>
+<th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Wavelength (nm)</th>
 </tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">1</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">3</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">5</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
-<tr><td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10</td><td style="padding: 8px; border: 1px solid #ddd;"></td><td style="padding: 8px; border: 1px solid #ddd;"></td></tr>
+<tr style="background: rgba(79, 172, 254, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">1</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">3</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(79, 172, 254, 0.05);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">5</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(255, 255, 255, 0.8);">
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">7</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+</tr>
+<tr style="background: rgba(79, 172, 254, 0.05);">
+<td style="padding: 12px; border-bottom: none; text-align: center; font-weight: 600; color: #4facfe;">10</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+</tr>
 </table>
 
 ---
