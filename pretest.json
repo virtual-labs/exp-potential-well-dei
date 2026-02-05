@@ -1,0 +1,145 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does the quantum number n represent in the particle-in-a-box model?",
+      "answers": {
+        "a": "The amplitude of the wavefunction",
+        "b": "The energy level of the particle",
+        "c": "The length of the box",
+        "d": "The time interval of oscillation"
+      },
+      "explanations": {
+        "b": "The quantum number n determines the energy level of the particle. Higher n means higher energy state. <a href='https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.02%3A_Quantum_Numbers_and_Atomic_Wave_Functions'>Learn more</a>"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the time-dependent wavefunction for a particle in a 1D box?",
+      "answers": {
+        "a": "Ψ(x,t) = A·cos(nπx/L)·sin(ωt)",
+        "b": "Ψ(x,t) = A·sin(nπx/L)·cos(ωt)",
+        "c": "Ψ(x,t) = A·sin(nx/L)·cos(t)",
+        "d": "Ψ(x,t) = A·cos(nx/L)·sin(t)"
+      },
+      "explanations": {
+        "b": "The correct form combines a sinusoidal spatial component sin(nπx/L) that satisfies boundary conditions, and a cosine time component cos(ωt) for time evolution."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What happens to the energy levels when the box length L decreases?",
+      "answers": {
+        "a": "Energy levels move closer together",
+        "b": "Energy levels remain unchanged",
+        "c": "Energy levels become more widely spaced (higher energy)",
+        "d": "Energy levels become continuous"
+      },
+      "explanations": {
+        "c": "Since E ∝ 1/L², decreasing L increases the energy. In a narrower box, greater confinement leads to higher quantized energy levels."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What does |Ψ|² represent in quantum mechanics?",
+      "answers": {
+        "a": "The energy of the particle",
+        "b": "The momentum of the particle",
+        "c": "The probability density of finding the particle",
+        "d": "The velocity of the particle"
+      },
+      "explanations": {
+        "c": "|Ψ|² gives the probability density - the likelihood of finding the particle at a given position. It is always positive."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. How many nodes does a wavefunction have for quantum number n?",
+      "answers": {
+        "a": "n nodes",
+        "b": "n + 1 nodes",
+        "c": "n - 1 nodes",
+        "d": "2n nodes"
+      },
+      "explanations": {
+        "c": "The number of nodes (zero crossings inside the box, excluding boundaries) equals n - 1. For example, n=1 has 0 nodes, n=2 has 1 node, n=3 has 2 nodes, etc."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the boundary condition for the wavefunction at the walls of an infinite potential well?",
+      "answers": {
+        "a": "Ψ = maximum at boundaries",
+        "b": "Ψ = 0 at boundaries",
+        "c": "Ψ = 1 at boundaries",
+        "d": "Ψ is undefined at boundaries"
+      },
+      "explanations": {
+        "b": "At the walls of an infinite potential well, the wavefunction must be zero (Ψ(0) = Ψ(L) = 0) because the particle cannot exist outside the box."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. What is the formula for energy levels in a 1D infinite potential well?",
+      "answers": {
+        "a": "Eₙ = nh/(8mL²)",
+        "b": "Eₙ = n²h²/(8mL²)",
+        "c": "Eₙ = nh²/(8mL)",
+        "d": "Eₙ = n²h/(8mL)"
+      },
+      "explanations": {
+        "b": "The energy levels are given by Eₙ = n²h²/(8mL²), showing that energy is proportional to n² and inversely proportional to L²."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Why can't a particle in an infinite potential well have zero energy (E = 0)?",
+      "answers": {
+        "a": "Because zero energy violates the Heisenberg uncertainty principle",
+        "b": "Because the particle has too much mass",
+        "c": "Because the box width is infinite",
+        "d": "Because the wavefunction becomes imaginary"
+      },
+      "explanations": {
+        "a": "A particle confined to a finite region must have some kinetic energy due to the uncertainty principle. If E = 0, the particle would have zero momentum, violating Δx·Δp ≥ ℏ/2."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. What is the de Broglie wavelength (λ) for a particle in the nth state of a box of length L?",
+      "answers": {
+        "a": "λ = L/n",
+        "b": "λ = 2L/n",
+        "c": "λ = nL/2",
+        "d": "λ = L/2n"
+      },
+      "explanations": {
+        "b": "The de Broglie wavelength is λ = 2L/n. This means exactly n half-wavelengths fit inside the box of length L, satisfying the boundary conditions."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What is the normalized spatial wavefunction for a particle in a 1D box?",
+      "answers": {
+        "a": "Ψₙ(x) = sin(nπx/L)",
+        "b": "Ψₙ(x) = √(1/L)·sin(nπx/L)",
+        "c": "Ψₙ(x) = √(2/L)·sin(nπx/L)",
+        "d": "Ψₙ(x) = 2·sin(nπx/L)"
+      },
+      "explanations": {
+        "c": "The normalized wavefunction is Ψₙ(x) = √(2/L)·sin(nπx/L). The normalization constant √(2/L) ensures that ∫|Ψ|²dx = 1 over the box."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    }
+  ]
+}

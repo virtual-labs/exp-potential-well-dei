@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Particle in a Box - Quantum Mechanics Simulation</title>
+    <meta name="description"
+        content="Interactive quantum mechanics simulation demonstrating particle behavior in a 1D potential well">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="quantum-icon">⚛️</div>
+                    <div>
+                        <h1>1D Particle in a Box</h1>
+                        <p class="subtitle">Quantum Mechanics Visualization</p>
+                    </div>
+                </div>
+                <div class="header-badges">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <span class="badge" id="statusBadge">● Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Left Panel - Controls -->
+            <aside class="control-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="icon">🎚️</span> Parameters
+                    </h3>
+
+                    <!-- Quantum Number -->
+                    <div class="control-group">
+                        <label for="quantumNumber">
+                            Quantum Number (n)
+                            <span class="tooltip" data-tip="Higher n = Higher energy level">ⓘ</span>
+                        </label>
+                        <div class="slider-container">
+                            <input type="range" id="quantumNumber" min="1" max="10" value="1" class="custom-slider">
+                            <span class="slider-value" id="quantumValue">1</span>
+                        </div>
+                    </div>
+
+                    <!-- Box Length -->
+                    <div class="control-group">
+                        <label for="boxLength">
+                            Box Length (L) in nm
+                            <span class="tooltip" data-tip="Length of the potential well">ⓘ</span>
+                        </label>
+                        <div class="slider-container">
+                            <input type="range" id="boxLength" min="1" max="10" value="5" step="0.5"
+                                class="custom-slider">
+                            <span class="slider-value" id="boxLengthValue">5.0</span>
+                        </div>
+                    </div>
+
+                    <!-- Wave Amplitude -->
+                    <div class="control-group">
+                        <label for="amplitude">
+                            Wave Amplitude
+                            <span class="tooltip" data-tip="Visual amplitude of the wave">ⓘ</span>
+                        </label>
+                        <div class="slider-container">
+                            <input type="range" id="amplitude" min="50" max="150" value="100" class="custom-slider">
+                            <span class="slider-value" id="amplitudeValue">100</span>
+                        </div>
+                    </div>
+
+                    <!-- Animation Speed -->
+                    <div class="control-group">
+                        <label for="speed">
+                            Animation Speed
+                            <span class="tooltip" data-tip="Speed of time evolution">ⓘ</span>
+                        </label>
+                        <div class="slider-container">
+                            <input type="range" id="speed" min="1" max="10" value="5" class="custom-slider">
+                            <span class="slider-value" id="speedValue">5x</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Display Options -->
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="icon">👁️</span> Display Options
+                    </h3>
+                    <div class="toggle-group">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showProbability">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Show |Ψ|² (Probability)</span>
+                        </label>
+                    </div>
+                    <div class="toggle-group">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showGrid" checked>
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Show Grid</span>
+                        </label>
+                    </div>
+                    <div class="toggle-group">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="showLabels" checked>
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label">Show Axis Labels</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="icon">▶️</span> Simulation Control
+                    </h3>
+                    <div class="button-grid">
+                        <button id="simulateButton" class="btn btn-primary">
+                            <span class="btn-icon">▶</span> Start
+                        </button>
+                        <button id="pauseButton" class="btn btn-secondary">
+                            <span class="btn-icon">⏸</span> Pause
+                        </button>
+                        <button id="resetButton" class="btn btn-danger">
+                            <span class="btn-icon">↺</span> Reset
+                        </button>
+                        <button id="screenshotButton" class="btn btn-outline">
+                            <span class="btn-icon">📷</span> Capture
+                        </button>
+                    </div>
+                    <p class="keyboard-hint">Press <kbd>Space</kbd> Play/Pause | <kbd>R</kbd> Reset</p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="simulation-area">
+                <!-- Canvas Container -->
+                <div class="canvas-container">
+                    <canvas id="simulationCanvas"></canvas>
+                    <div class="canvas-overlay" id="canvasOverlay">
+                        <span class="overlay-text">Press Start to begin simulation</span>
+                    </div>
+                </div>
+
+                <!-- Live Data Table -->
+                <div class="data-panel">
+                    <h3 class="section-title">
+                        <span class="icon">📊</span> Live Measurements
+                    </h3>
+                    <div class="data-grid">
+                        <div class="data-card">
+                            <span class="data-label">Energy (Eₙ)</span>
+                            <span class="data-value" id="energyValue">0.038</span>
+                            <span class="data-unit">eV</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">Wavelength (λ)</span>
+                            <span class="data-value" id="wavelengthValue">10.00</span>
+                            <span class="data-unit">nm</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">Nodes</span>
+                            <span class="data-value" id="nodesValue">0</span>
+                            <span class="data-unit">points</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">Period</span>
+                            <span class="data-value" id="periodValue">100</span>
+                            <span class="data-unit">frames</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">Time (t)</span>
+                            <span class="data-value" id="timeValue">0</span>
+                            <span class="data-unit">steps</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">State</span>
+                            <span class="data-value state-indicator" id="stateValue">n = 1</span>
+                            <span class="data-unit">Ground State</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Panel - Educational Content -->
+            <aside class="info-panel">
+                <!-- Procedure Steps -->
+                <div class="panel-section procedure-section">
+                    <h3 class="section-title">
+                        <span class="icon">📝</span> Experiment Procedure
+                    </h3>
+                    <ol class="procedure-list">
+                        <li class="procedure-step" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Set <strong>n = 1</strong> for ground state</span>
+                        </li>
+                        <li class="procedure-step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Click <strong>Start</strong> to observe oscillation</span>
+                        </li>
+                        <li class="procedure-step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Increase <strong>n</strong> to see more oscillations</span>
+                        </li>
+                        <li class="procedure-step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Enable <strong>|Ψ|²</strong> for probability</span>
+                        </li>
+                        <li class="procedure-step" data-step="5">
+                            <span class="step-number">5</span>
+                            <span class="step-text">Compare <strong>Energy</strong> at different n</span>
+                        </li>
+                        <li class="procedure-step" data-step="6">
+                            <span class="step-number">6</span>
+                            <span class="step-text">Change <strong>Box Length</strong> to see effect</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Key Equations -->
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="icon">📐</span> Key Equations
+                    </h3>
+                    <div class="equation-card">
+                        <div class="equation">Ψ(x,t) = A·sin(nπx/L)·cos(ωt)</div>
+                        <div class="equation-label">Time-dependent Wavefunction</div>
+                    </div>
+                    <div class="equation-card">
+                        <div class="equation">Eₙ = n²h²/(8mL²)</div>
+                        <div class="equation-label">Energy Levels</div>
+                    </div>
+                </div>
+
+                <!-- Quick Tips -->
+                <div class="panel-section tips-section">
+                    <h3 class="section-title">
+                        <span class="icon">💡</span> Observation
+                    </h3>
+                    <div class="tip-card" id="dynamicTip">
+                        <p>👀 <strong>Watch:</strong> Peaks (antinodes) = quantum number n!</p>
+                    </div>
+                </div>
+
+                <!-- Color Legend -->
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="icon">🎨</span> Legend
+                    </h3>
+                    <div class="legend-container">
+                        <div class="legend-item">
+                            <span class="legend-color"
+                                style="background: linear-gradient(90deg, #FF6B6B, #4ECDC4);"></span>
+                            <span>Ψ(x,t) - Wavefunction</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: rgba(255, 193, 7, 0.8);"></span>
+                            <span>|Ψ|² - Probability</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+
+</html>
