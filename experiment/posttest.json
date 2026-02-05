@@ -112,6 +112,34 @@
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
+    },
+    {
+      "question": "9. When you decreased the box length L while keeping n=3 constant, what happened to the energy value displayed?",
+      "answers": {
+        "a": "Energy decreased proportionally",
+        "b": "Energy increased significantly",
+        "c": "Energy remained constant",
+        "d": "Energy became negative"
+      },
+      "explanations": {
+        "b": "Since E ∝ 1/L², decreasing the box length causes energy to increase dramatically. Smaller confinement means higher energy - this is a key quantum mechanical principle."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What did you observe about the wavefunction amplitude when you adjusted the Wave Amplitude slider?",
+      "answers": {
+        "a": "It changed the energy levels",
+        "b": "It changed the quantum number",
+        "c": "It only changed the visual height of the wave without affecting physics",
+        "d": "It changed the wavelength"
+      },
+      "explanations": {
+        "c": "The Wave Amplitude slider is purely for visualization - it scales the display height of the wavefunction but doesn't change any physical properties like energy, wavelength, or quantum number."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
   ]
 }

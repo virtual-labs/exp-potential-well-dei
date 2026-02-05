@@ -112,6 +112,34 @@
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
+    },
+    {
+      "question": "9. What is the de Broglie wavelength (λ) for a particle in the nth state of a box of length L?",
+      "answers": {
+        "a": "λ = L/n",
+        "b": "λ = 2L/n",
+        "c": "λ = nL/2",
+        "d": "λ = L/2n"
+      },
+      "explanations": {
+        "b": "The de Broglie wavelength is λ = 2L/n. This means exactly n half-wavelengths fit inside the box of length L, satisfying the boundary conditions."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What is the normalized spatial wavefunction for a particle in a 1D box?",
+      "answers": {
+        "a": "Ψₙ(x) = sin(nπx/L)",
+        "b": "Ψₙ(x) = √(1/L)·sin(nπx/L)",
+        "c": "Ψₙ(x) = √(2/L)·sin(nπx/L)",
+        "d": "Ψₙ(x) = 2·sin(nπx/L)"
+      },
+      "explanations": {
+        "c": "The normalized wavefunction is Ψₙ(x) = √(2/L)·sin(nπx/L). The normalization constant √(2/L) ensures that ∫|Ψ|²dx = 1 over the box."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
