@@ -46,6 +46,7 @@ const simulateBtn = document.getElementById('simulateButton');
 const pauseBtn = document.getElementById('pauseButton');
 const resetBtn = document.getElementById('resetButton');
 const screenshotBtn = document.getElementById('screenshotButton');
+const themeToggle = document.getElementById('themeToggle');
 
 // DOM Elements - Display
 const statusBadge = document.getElementById('statusBadge');
@@ -161,8 +162,14 @@ function drawGrid() {
 
     const { width, height } = getCanvasDimensions();
     const centerY = height / 2;
+    const theme = document.documentElement.getAttribute('data-theme');
 
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    // Theme-aware grid colors
+    if (theme === 'light') {
+        ctx.strokeStyle = 'rgba(102, 126, 234, 0.08)';
+    } else {
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    }
     ctx.lineWidth = 1;
 
     const gridSpacing = 40;
@@ -180,7 +187,12 @@ function drawGrid() {
         ctx.stroke();
     }
 
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+    // Theme-aware center line
+    if (theme === 'light') {
+        ctx.strokeStyle = 'rgba(102, 126, 234, 0.3)';
+    } else {
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+    }
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(0, centerY);
@@ -193,9 +205,16 @@ function drawAxisLabels() {
 
     const { width, height } = getCanvasDimensions();
     const centerY = height / 2;
+    const theme = document.documentElement.getAttribute('data-theme');
 
     ctx.font = '11px Inter, sans-serif';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+
+    // Theme-aware text color
+    if (theme === 'light') {
+        ctx.fillStyle = 'rgba(26, 26, 46, 0.6)';
+    } else {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    }
 
     ctx.fillText('+Ψ', 8, 20);
     ctx.fillText('0', 8, centerY + 4);
@@ -306,7 +325,13 @@ function drawQuantumInfo() {
 function render() {
     const { width, height } = getCanvasDimensions();
 
-    ctx.fillStyle = 'rgba(15, 15, 26, 1)';
+    // Theme-aware canvas background
+    const theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'light') {
+        ctx.fillStyle = 'rgba(245, 247, 250, 1)';
+    } else {
+        ctx.fillStyle = 'rgba(15, 15, 26, 1)';
+    }
     ctx.fillRect(0, 0, width, height);
 
     drawGrid();
@@ -492,6 +517,10 @@ screenshotBtn.addEventListener('click', () => {
     link.click();
 });
 
+themeToggle.addEventListener('click', () => {
+    toggleTheme();
+});
+
 // Keyboard shortcuts
 document.addEventListener('keydown', (e) => {
     switch (e.code) {
@@ -522,6 +551,10 @@ document.addEventListener('keydown', (e) => {
             showProbabilityToggle.checked = !showProbabilityToggle.checked;
             showProbabilityToggle.dispatchEvent(new Event('change'));
             break;
+        case 'KeyT': // Assuming 'T' for Theme
+            e.preventDefault();
+            themeToggle.click();
+            break;
     }
 });
 
@@ -536,10 +569,46 @@ window.addEventListener('resize', () => {
 });
 
 // ============================================
+// THEME MANAGEMENT
+// ============================================
+
+function setTheme(theme) {
+    const html = document.documentElement;
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+
+    if (theme === 'light') {
+        html.setAttribute('data-theme', 'light');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+    }
+
+    // Re-render canvas with new theme
+    render();
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+}
+
+// ============================================
 // INITIALIZATION
 // ============================================
 
 function init() {
+    // Initialize theme before anything else
+    initTheme();
+
     // Wait for layout to complete before setting up canvas
     requestAnimationFrame(() => {
         setupCanvas();
@@ -555,6 +624,7 @@ function init() {
         console.log('   R - Reset');
         console.log('   ↑/↓ - Change Quantum Number');
         console.log('   P - Toggle Probability Density');
+        console.log('   T - Toggle Theme');
     });
 }
 
