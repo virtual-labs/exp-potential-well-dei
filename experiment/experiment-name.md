@@ -1,1 +1,1 @@
-## Quantum Mechanics of a particle in a potential well
+## Quantum Mechanics of a Particle in a Potential Well

@@ -9,9 +9,9 @@ The "particle in a box" model is one of the fundamental problems in quantum mech
 
 ### 1. Wavefunction Ψ(x,t)
 The wavefunction describes the quantum state of the particle. In our simulation:
+- The complete wavefunction is: **Ψ(x,t) = A·sin(nπx/L)·cos(ωt)**
 - **Spatial Component**: sin(nπx/L) - describes the distribution within the box
 - **Time Component**: cos(ωt) - describes how the wavefunction evolves over time
-- The complete wavefunction is: **Ψ(x,t) = A·sin(nπx/L)·cos(ωt)**
 
 ### 2. Quantum Number (n)
 The quantum number n = 1, 2, 3, ... determines:
@@ -22,7 +22,6 @@ The quantum number n = 1, 2, 3, ... determines:
 ### 3. Energy Levels
 The energy of each quantum state is given by:
 
-![Energy Equation](images/image1.png)
 
 **Eₙ = n²h²/(8mL²)**
 
@@ -48,7 +47,7 @@ Changing the box length affects:
 
 ### Parameters Panel
 
-<table style="border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
+<table style="border-collapse: collapse;  overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
 <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Control</th>
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Description</th>
@@ -100,18 +99,13 @@ The simulation displays real-time values for:
 ## Mathematical Foundation
 
 ### Schrödinger Equation
-![Schrodinger Equation](images/image2.png)
+![Schrodinger Equation](images/image4.png)
 
 The time-independent Schrödinger equation for a particle in a box:
-- Inside the box: -ℏ²/(2m) · d²Ψ/dx² = EΨ
+- Inside the box: -ℏ²/(2m) · d²Ψ/dx² = EΨ,      here V = 0
 - At boundaries: Ψ(0) = Ψ(L) = 0
 
 ### Wavefunction Solution
-![Wavefunction](images/image3.png)
 
 The normalized spatial wavefunction:
 Ψₙ(x) = √(2/L) · sin(nπx/L)
-
-## References
-1. [Particle in a Box - LibreTexts](https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions)
-2. [Schrödinger Equation - Wikipedia](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation)

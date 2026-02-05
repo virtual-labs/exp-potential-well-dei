@@ -1,11 +1,3 @@
-### Procedure: 1D Particle in a Box Simulation
-
-Follow these step-by-step instructions to explore the quantum mechanical behavior of a particle confined in a 1D infinite potential well.
-
----
-
-## Getting Started
-
 ### Step 1: Understanding the Interface
 When you open the simulation, you'll see three main sections:
 - **Left Panel (Control Panel)**: Contains all adjustable parameters and controls
@@ -33,7 +25,11 @@ When you open the simulation, you'll see three main sections:
 - There is **1 antinode** (peak) at the center
 - Note the **Energy value** displayed in Live Measurements
 
----
+![simulation image](images/image6.png) 
+
+Fig. 1 Wave function and the Probability of the Particles trapped in 1D box.
+
+--- 
 
 ## Exploring Higher Energy States
 
@@ -47,7 +43,7 @@ When you open the simulation, you'll see three main sections:
 ### Step 6: Record Observations
 Fill in the observation table for each quantum number:
 
-<table style="border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
+<table style="border-collapse: collapse;  overflow: hidden; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);">
 <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">n (Quantum Number)</th>
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy (eV)</th>
@@ -56,74 +52,74 @@ Fill in the observation table for each quantum number:
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">No. of Peaks</th>
 </tr>
 <tr style="background: rgba(102, 126, 234, 0.05);">
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">1</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<tr><td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">1</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.015</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">10.00</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">2</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.060</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">5.00</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">2</td>
 </tr>
 <tr style="background: rgba(102, 126, 234, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">3</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.135</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">3.33</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">2</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">3</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">4</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.241</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">2.50</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">3</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">4</td>
 </tr>
 <tr style="background: rgba(102, 126, 234, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">5</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.376</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">2.00</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">4</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">5</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">6</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.542</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1.67</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">5</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">6</td>
 </tr>
 <tr style="background: rgba(102, 126, 234, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">7</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.737</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1.43</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">6</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">7</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">8</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">0.963</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1.25</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">7</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">8</td>
 </tr>
 <tr style="background: rgba(102, 126, 234, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center; font-weight: 600; color: #667eea;">9</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1.218</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">1.11</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">8</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(102, 126, 234, 0.1); text-align: center;">9</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: none; text-align: center; font-weight: 600; color: #667eea;">10</td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">1.504</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">1.00</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">9</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">10</td>
 </tr>
 </table>
 
@@ -133,7 +129,7 @@ Fill in the observation table for each quantum number:
 
 ### Step 7: Enable Probability Display
 1. In the **Display Options** section, toggle ON **"Show |Ψ|² (Probability)"**
-2. Observe the yellow curve showing probability density
+2. Observe the yellow curve showing probability density as shown in fig.1
 3. Compare with the wavefunction (gradient colored curve)
 
 ### Step 8: Compare Wavefunction and Probability
@@ -155,7 +151,7 @@ Fill in the observation table for each quantum number:
 
 ### Step 10: Record Box Length Effect
 
-<table style="border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);">
+<table style="border-collapse: collapse; overflow: hidden; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);">
 <tr style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Box Length L (nm)</th>
 <th style="padding: 14px 12px; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em;">Energy at n=3 (eV)</th>
@@ -163,28 +159,28 @@ Fill in the observation table for each quantum number:
 </tr>
 <tr style="background: rgba(79, 172, 254, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">1</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">3.385</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">0.67</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">3</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">0.376</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">2.00</td>
 </tr>
 <tr style="background: rgba(79, 172, 254, 0.05);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">5</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">0.135</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">3.33</td>
 </tr>
 <tr style="background: rgba(255, 255, 255, 0.8);">
 <td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center; font-weight: 600; color: #4facfe;">7</td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
-<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;"></td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">0.069</td>
+<td style="padding: 12px; border-bottom: 1px solid rgba(79, 172, 254, 0.1); text-align: center;">4.67</td>
 </tr>
 <tr style="background: rgba(79, 172, 254, 0.05);">
 <td style="padding: 12px; border-bottom: none; text-align: center; font-weight: 600; color: #4facfe;">10</td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
-<td style="padding: 12px; border-bottom: none; text-align: center;"></td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">0.034</td>
+<td style="padding: 12px; border-bottom: none; text-align: center;">6.67</td>
 </tr>
 </table>
 
