@@ -1,0 +1,145 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In the simulation, when you increased the quantum number n from 1 to 5, what did you observe about the number of peaks (antinodes)?",
+      "answers": {
+        "a": "Number of peaks decreased",
+        "b": "Number of peaks remained the same",
+        "c": "Number of peaks increased to match n",
+        "d": "Number of peaks became random"
+      },
+      "explanations": {
+        "c": "The number of antinodes (peaks) in the wavefunction equals the quantum number n. So for n=5, there are exactly 5 peaks."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. When you enabled the |Ψ|² (probability) display, at which positions was the probability zero?",
+      "answers": {
+        "a": "At the center of the box only",
+        "b": "At the boundaries and at the node positions",
+        "c": "Everywhere inside the box",
+        "d": "Probability was never zero"
+      },
+      "explanations": {
+        "b": "The probability density |Ψ|² is zero at the boundaries (x=0, x=L) and at all node positions where the wavefunction crosses zero."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Based on your observations, how did the energy change when you doubled the quantum number from n=2 to n=4?",
+      "answers": {
+        "a": "Energy doubled",
+        "b": "Energy became 4 times larger",
+        "c": "Energy remained the same",
+        "d": "Energy decreased"
+      },
+      "explanations": {
+        "b": "Since E ∝ n², when n doubles from 2 to 4, the energy increases by a factor of (4/2)² = 4."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What did you observe about the wavelength when you increased the box length L?",
+      "answers": {
+        "a": "Wavelength decreased",
+        "b": "Wavelength increased proportionally",
+        "c": "Wavelength remained constant",
+        "d": "Wavelength became zero"
+      },
+      "explanations": {
+        "b": "The wavelength in a particle-in-a-box is λ = 2L/n wavelength increases proportionally with box length L."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In the Live Measurements panel, what was the relationship you observed between nodes and quantum number n?",
+      "answers": {
+        "a": "Nodes = n",
+        "b": "Nodes = n + 1",
+        "c": "Nodes = n - 1",
+        "d": "Nodes = 2n"
+      },
+      "explanations": {
+        "c": "From the simulation, you can verify that the number of nodes (zero crossings inside the box) equals n - 1 for quantum state n."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. When comparing the ground state (n=1) with excited states (n>1), what did you notice about where the particle is most likely to be found?",
+      "answers": {
+        "a": "Always at the center for all states",
+        "b": "Always at the boundaries for all states",
+        "c": "At different positions depending on the quantum number",
+        "d": "Uniformly distributed for all states"
+      },
+      "explanations": {
+        "c": "The probability distribution changes with n. For n=1, maximum probability is at center. For higher n, there are multiple maxima at antinode positions."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. What happened to the oscillation frequency when you increased the quantum number n?",
+      "answers": {
+        "a": "Oscillation became slower",
+        "b": "Oscillation became faster",
+        "c": "Oscillation speed remained unchanged",
+        "d": "Oscillation stopped completely"
+      },
+      "explanations": {
+        "b": "Higher energy states (higher n) have higher frequency of oscillation since ω ∝ E ∝ n². This is visible in the time evolution of the wavefunction."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. From your graph of Energy vs Quantum Number, what type of relationship did you observe?",
+      "answers": {
+        "a": "Linear relationship (straight line)",
+        "b": "Quadratic relationship (parabola)",
+        "c": "Inverse relationship (hyperbola)",
+        "d": "No clear relationship"
+      },
+      "explanations": {
+        "b": "The energy plot shows a quadratic (parabolic) relationship because E ∝ n². The graph curves upward as n increases."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. When you decreased the box length L while keeping n=3 constant, what happened to the energy value displayed?",
+      "answers": {
+        "a": "Energy decreased proportionally",
+        "b": "Energy increased significantly",
+        "c": "Energy remained constant",
+        "d": "Energy became negative"
+      },
+      "explanations": {
+        "b": "Since E ∝ 1/L², decreasing the box length causes energy to increase dramatically. Smaller confinement means higher energy - this is a key quantum mechanical principle."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What did you observe about the wavefunction amplitude when you adjusted the Wave Amplitude slider?",
+      "answers": {
+        "a": "It changed the energy levels",
+        "b": "It changed the quantum number",
+        "c": "It only changed the visual height of the wave without affecting physics",
+        "d": "It changed the wavelength"
+      },
+      "explanations": {
+        "c": "The Wave Amplitude slider is purely for visualization - it scales the display height of the wavefunction but doesn't change any physical properties like energy, wavelength, or quantum number."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
