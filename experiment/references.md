@@ -20,7 +20,8 @@
 7. OpenStax. (2016). *University Physics Volume 3*. Houston: OpenStax.  
    See Section “7.4 The Quantum Particle in a Box”, which derives the wavefunctions and energies for a particle in a one-dimensional infinite well and discusses quantization.
 
-8. Ghatak, A. K., & Lokanathan, S. (2004). *Quantum Mechanics: Theory and Applications* (5th ed.). Macmillan Publishers India Limited.
+8. Ghatak, A. K., & Lokanathan, S. (2004). *Quantum Mechanics: Theory and Applications* (5th ed.). Macmillan Publishers India Limited.</br>
+  (Chapter 6: Bound state solutions of the solution equation Schrödinger Equation)
 
 ---
 
