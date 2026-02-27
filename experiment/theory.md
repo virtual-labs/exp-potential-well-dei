@@ -1,3 +1,4 @@
+
 ### Theory: 1D Particle in a Box (Infinite Potential Well)
 
 In quantum mechanics, the behavior of particles confined to a one-dimensional box can be analyzed using the Schrödinger equation. This experiment provides an interactive visual simulation of a particle's wavefunction in a 1D infinite potential well using the time-dependent Schrödinger equation.
@@ -26,7 +27,7 @@ The energy of each quantum state is given by:
 **Eₙ = n²h²/(8mL²)**
 
 Where:
-- ℏ is the reduced Planck constant
+- h is the Planck's constant
 - Eₙ represents the energy corresponding to quantum number n
 - n is the quantum number (1, 2, 3, ...)
 - L is the length of the box
